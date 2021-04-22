@@ -18,7 +18,7 @@ sudo docker run -it --rm --name cudadev-jfn \
     -v /dataf:/users/ml/nb/data \
     cudadev /bin/bash
 
-# --gpus all
+
 
 # ####################################################################################
 # cudadev jupyter
@@ -44,3 +44,10 @@ docker run -dit --name cudadev-ju-jfn --restart unless-stopped \
     -v /home/jneto:/users/ml/nb \
     -v /dataf:/users/ml/nb/data \
     cudadev /bin/bash scripts/ju.sh
+
+
+# ####################################################################################
+# etc
+# ####################################################################################
+
+# --gpus all

@@ -6,7 +6,9 @@
 #
 
 cd ~/dev/lib/cudadev &&\
-git add . && git commit -m 'update' || git push
+git add . && git commit -m 'update' || git push &&\
+ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
+    "cd ~/lib && rm -rf cudadev && git clone https://github.com/jn2050/cudadev.git"
 
 exit 0
 

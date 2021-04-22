@@ -1,10 +1,14 @@
 #
-# Docker images library
+# Build cudadev image
 #
-# Run on cuda1
+# RUN: ~/dev/lib/cudadev/scripts/deploy.sh
 #
 
-# rsync -zrave 'ssh -i ~/dev/.ssh/jn2020 -p 9022' ~/dev/lib/docker jneto@ml.dlogic.io:/home/jneto/lib
+# Build image on cuda1
+cd ~/dev/lib/cudadev &&\
+git add . && git commit -m 'update' && git push &&\
+ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
+    "cd ~/lib && rm -rf ml && git clone https://github.com/jn2050/ml.git && cd ml"
 
 # export img=ops
 export img=cuda

@@ -4,13 +4,14 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.8
+  - jupyter_contrib_nbextensions
   - pip
   - requests
   - yaml
   - fire
   - schedule
   - aiohttp
-  - jupyter_contrib_nbextensions
+  - librosa
   - pip:
     - twilio
     - sendgrid

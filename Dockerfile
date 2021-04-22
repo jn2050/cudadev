@@ -42,11 +42,14 @@ RUN pip3 install --upgrade pip &&\
     rm $ANACONDA_VER &&\
     conda update -y -n base -c defaults conda &&\
     conda init bash
-RUN jupyter contrib nbextension install --user
 
-# Install conda and pip packages
+# Install conda and pip packages, setup jupyter
 RUN conda env create -f $HOME/files/environment.yml &&\
     echo "conda activate ml" >> ~/.bashrc
+RUN jupyter contrib nbextension install --user
 
 # Install pytorch
 RUN conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
+
+# Install rapidsai
+RUN conda install -y -c rapidsai -c nvidia -c numba -c conda-forge cudf=0.18 python=3.8

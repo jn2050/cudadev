@@ -1,0 +1,16 @@
+name: ml
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python>=3.8
+  - pip
+  - requests
+  - yaml
+  - fire
+  - schedule
+  - aiohttp
+  - jupyter_contrib_nbextensions
+  - pip:
+    - twilio
+    - sendgrid

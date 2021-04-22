@@ -26,12 +26,8 @@ ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
 exit 0
 
 # Run image to test
-docker run -dit --name cudadev-test cudadev /bin/bash
+sudo docker run -it --rm --name cudadev-test cudadev /bin/bash
 
 # Check packages (inside container)
-
-# Check Cuda toolkit version
-nvcc --version
-
-# Check python version
-
+python -V
+nvcc --version  # Cuda toolkit version

@@ -12,6 +12,7 @@ dependencies:
   - schedule
   - aiohttp
   - librosa
+  - scikit-learn
   - pip:
     - twilio
     - sendgrid

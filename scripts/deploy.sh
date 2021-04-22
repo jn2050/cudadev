@@ -50,4 +50,5 @@ docker run -dit --name cudadev-ju-jfn --restart unless-stopped \
 # etc
 # ####################################################################################
 
+# --no-cache
 # --gpus all

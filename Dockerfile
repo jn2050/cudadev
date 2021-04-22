@@ -50,11 +50,11 @@ RUN conda env create -f $HOME/files/environment.yml &&\
 RUN jupyter contrib nbextension install --user
 
 # Install pytorch
-# RUN conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
+RUN conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
 
 # Install rapidsai
-# RUN conda install -y -c rapidsai -c nvidia -c numba -c conda-forge cudf=0.18 python=3.8
+RUN conda install -y -c rapidsai -c nvidia -c numba -c conda-forge cudf=0.18 python=3.8
 
 # ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skip_cache
-# RUN pip install dl2050utils
-# RUN pip install dl2050nn
+RUN pip install dl2050utils
+RUN pip install dl2050nn

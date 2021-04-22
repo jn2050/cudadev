@@ -1,5 +1,5 @@
-# ml: docker setup for machine learning environment
-* Includes Python machine learning, pythorch, fast.ai and swift for tensorflow
+# Dokcer image for cuda and machine learning development environment
+* Includes CUDA Toolkit, Anaconda, Pythorch, Rapidsai
 
 
 |Author|João Neto|
@@ -8,19 +8,22 @@
 ****
 ### Pre-Requisites 
 
-* Install Docker on macOS
-* Setup Docker to use half of RAM and half of CPUs
+* Access to cuda1 host: ssh keys setup for each user
 
-* Anaconda3-2020.07-Linux-x86_64 with Python 3.8.5
+### Current versions 
+
+* Cuda Toolkit 11.1 on Ubuntu 20.04
+* Anaconda3 2020.07 Linux distro with Python 3.8.5
+* Pytorch 1.8.1
 
 
 ****
 ### Instalation from source
 
 ```
-git clone https://github.com/jn2050/ml.git
-cd ml
-sudo docker build -t ml .
+git clone https://github.com/jn2050/cudadev.git
+cd cudadev
+sudo docker build -t cudadev .
 ```
 
 
@@ -29,14 +32,14 @@ sudo docker build -t ml .
 
 ```
 docker login
-docker pull digitallogic/private:ml
+docker pull digitallogic/private:cudadev
 ```
 
 
 ****
 ### Usage 
 
-* Bash shell:
+* Launch bash shell on cudadev image:
 
 ```
 docker run -it --rm \
@@ -46,7 +49,7 @@ docker run -it --rm \
     ml /bin/bash
 ```
 
-* Launch Jupyer (survives reboots):
+* Launch Jupyer server on cudadev image (survives reboots):
 
 ```
 docker run -dit \

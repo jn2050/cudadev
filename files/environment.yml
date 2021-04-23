@@ -11,8 +11,11 @@ dependencies:
   - fire
   - schedule
   - aiohttp
+  - pandas
+  - pyarrow
   - librosa
   - scikit-learn
+  - redisearch
   - pip:
     - twilio
     - sendgrid

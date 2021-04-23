@@ -15,7 +15,8 @@ dependencies:
   - pyarrow
   - librosa
   - scikit-learn
-  - redisearch
   - pip:
     - twilio
     - sendgrid
+    - redis
+    - redisearch

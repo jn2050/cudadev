@@ -5,9 +5,13 @@ channels:
 dependencies:
   - python>=3.8
   - pip
-  - jupyter_contrib_nbextensions
   - requests
-  # - librosa
+  - jupyter_contrib_nbextensions
+  - pyarrow
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - librosa
   - pip:
     - nest_asyncio
     - redis

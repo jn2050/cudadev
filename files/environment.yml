@@ -3,12 +3,11 @@ channels:
   - anaconda
   - conda-forge
 dependencies:
-  - python>=3.8
   - pip
   - requests
   - jupyter_contrib_nbextensions
   - pyarrow
-  - pandas
+  - pandas=1.2.4
   - matplotlib
   - scikit-learn
   - librosa

@@ -18,8 +18,12 @@ ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
 ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
     "cd ~/lib/cudadev &&\
     sudo docker build -t cudadev . &&\
-    sudo docker tag cudadev digitallogic/private:cudadev &&\
-    sudo docker push digitallogic/private:cudadev"
+    sudo docker tag cudadev digitallogic/private:cudadev"
+
+exit 0
+
+# Push to dockerhub
+ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io "sudo docker push digitallogic/private:cudadev"
 
 exit 0
 

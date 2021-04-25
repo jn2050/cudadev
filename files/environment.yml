@@ -4,19 +4,11 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.8
-  - jupyter_contrib_nbextensions
   - pip
+  - jupyter_contrib_nbextensions
   - requests
-  - yaml
-  - fire
-  - schedule
-  - aiohttp
-  - pandas
-  - pyarrow
-  - librosa
-  - scikit-learn
+  # - librosa
   - pip:
-    - twilio
-    - sendgrid
+    - nest_asyncio
     - redis
     - redisearch

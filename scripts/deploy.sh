@@ -35,6 +35,7 @@ sudo docker run -it --rm --name cudadev-jranito \
 
 # For jneto
 sudo docker run -dit --name cudadev-ju-jneto --restart unless-stopped \
+    --gpus all \
     -p 8201:8888 \
     -v /home/jneto/dev:/users/ml/dev \
     -v /dataf:/users/ml/dev/data \
@@ -47,6 +48,7 @@ ssh -i ~/.ssh/jn2020 -p 9022 -L 8201:localhost:8201 jneto@ml.dlogic.io
 
 # For jranito
 sudo docker run -dit --name cudadev-ju-jranito --restart unless-stopped \
+    --gpus all \
     -p 8202:8888 \
     -v /home/jranito/dev:/users/ml/dev \
     -v /dataf:/users/ml/dev/data \

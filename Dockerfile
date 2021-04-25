@@ -3,7 +3,7 @@ FROM nvidia/cuda:11.1-devel-ubuntu20.04
 RUN export DEBIAN_FRONTEND=noninteractive &&\
     apt-get update &&\
     apt-get install -y --fix-missing \
-        sudo wget curl rsync vim-nox python python3-pip git git-core iputils-ping
+        sudo wget curl rsync vim-nox python python3-pip git git-core iputils-ping locate bzip2
 
 ENV HOME=/users/ml
 RUN echo "ml ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers &&\
@@ -33,8 +33,8 @@ ENV PATH="/usr/local/anaconda3/bin:$PATH"
 ENV BASH_ENV ~/.bashrc
 SHELL ["/bin/bash", "-c"]
 
-# Install Anaconda (with Python 3.8.5)
-ENV ANACONDA_VER=Anaconda3-2020.07-Linux-x86_64.sh
+# Install Anaconda (with Python 3.x.x)
+ENV ANACONDA_VER=Anaconda3-2020.11-Linux-x86_64.sh
 RUN pip3 install --upgrade pip &&\
     cd $HOME/downloads &&\
     wget -q https://repo.anaconda.com/archive/$ANACONDA_VER &&\

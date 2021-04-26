@@ -5,10 +5,12 @@ channels:
 dependencies:
   - pip
   - requests
+  - pyarrow=3.0.0
+  - feather-format
+  # - pandas=1.2.4
   - jupyter_contrib_nbextensions
-  - pyarrow
-  - pandas=1.2.4
   - matplotlib
+  - seaborn
   - scikit-learn
   - librosa
   - pip:

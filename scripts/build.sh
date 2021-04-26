@@ -17,7 +17,7 @@ ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
     "cd ~/lib && rm -rf cudadev && git clone https://github.com/jn2050/cudadev.git" &&\
 ssh -i ~/.ssh/jn2020 -p 9022 jneto@ml.dlogic.io \
     "cd ~/lib/cudadev &&\
-    sudo docker build -t cudadev . &&\
+    sudo docker build -t cudadev . --no-cache &&\
     sudo docker tag cudadev digitallogic/private:cudadev"
 
 exit 0

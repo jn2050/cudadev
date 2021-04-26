@@ -34,6 +34,8 @@ sudo docker run -it --rm --name cudadev-jranito \
 # ####################################################################################
 
 # For jneto
+
+(sudo docker rm -f cudadev-ju-jneto || true) &&\
 sudo docker run -dit --name cudadev-ju-jneto --restart unless-stopped \
     --gpus all \
     -p 8201:8888 \
@@ -41,7 +43,6 @@ sudo docker run -dit --name cudadev-ju-jneto --restart unless-stopped \
     -v /dataf:/users/ml/dev/data \
     --network devnet \
     cudadev /bin/bash scripts/ju.sh
-# sudo docker rm -f cudadev-ju-jneto
 
 # Access from mac: mapping cuda1 port 8201 to mac local port 8201 (access on mac browser 127.0.0.1:8201)
 ssh -i ~/.ssh/jn2020 -p 9022 -L 8201:localhost:8201 jneto@ml.dlogic.io
